@@ -1,4 +1,4 @@
-package com.bigkoo.pickerview.view;
+package com.andylidong.pickerview.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
-import com.bigkoo.pickerview.utils.PickerViewAnimateUtil;
-import com.bigkoo.pickerview.R;
-import com.bigkoo.pickerview.listener.OnDismissListener;
+import com.andylidong.pickerview.utils.PickerViewAnimateUtil;
+import com.andylidong.pickerview.R;
+import com.andylidong.pickerview.listener.OnDismissListener;
 
 /**
  * Created by Sai on 15/11/22.

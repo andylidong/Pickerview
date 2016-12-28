@@ -1,4 +1,4 @@
-package com.bigkoo.pickerview.lib;
+package com.andylidong.pickerview.lib;
 
 final class OnItemSelectedRunnable implements Runnable {
     final WheelView loopView;

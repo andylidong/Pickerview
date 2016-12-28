@@ -1,11 +1,11 @@
-package com.bigkoo.pickerview.view;
+package com.andylidong.pickerview.view;
 
 import android.view.View;
 
-import com.bigkoo.pickerview.R;
-import com.bigkoo.pickerview.adapter.ArrayWheelAdapter;
-import com.bigkoo.pickerview.lib.WheelView;
-import com.bigkoo.pickerview.listener.OnItemSelectedListener;
+import com.andylidong.pickerview.adapter.ArrayWheelAdapter;
+import com.andylidong.pickerview.lib.WheelView;
+import com.andylidong.pickerview.listener.OnItemSelectedListener;
+import com.andylidong.pickerview.R;
 
 import java.util.ArrayList;
 

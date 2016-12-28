@@ -1,4 +1,4 @@
-package com.bigkoo.pickerview.model;
+package com.andylidong.pickerview.model;
 
 /**
  * Created by Sai on 2016/7/13.

@@ -1,4 +1,4 @@
-package com.bigkoo.pickerview;
+package com.andylidong.pickerview;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.bigkoo.pickerview.view.BasePickerView;
-import com.bigkoo.pickerview.view.WheelTime;
+import com.andylidong.pickerview.view.BasePickerView;
+import com.andylidong.pickerview.view.WheelTime;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

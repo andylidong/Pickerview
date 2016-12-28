@@ -1,14 +1,14 @@
-package com.bigkoo.pickerview.view;
+package com.andylidong.pickerview.view;
 
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
-import com.bigkoo.pickerview.R;
-import com.bigkoo.pickerview.TimePickerView.Type;
-import com.bigkoo.pickerview.adapter.NumericWheelAdapter;
-import com.bigkoo.pickerview.lib.WheelView;
-import com.bigkoo.pickerview.listener.OnItemSelectedListener;
+import com.andylidong.pickerview.TimePickerView.Type;
+import com.andylidong.pickerview.adapter.NumericWheelAdapter;
+import com.andylidong.pickerview.lib.WheelView;
+import com.andylidong.pickerview.listener.OnItemSelectedListener;
+import com.andylidong.pickerview.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

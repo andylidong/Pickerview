@@ -1,4 +1,4 @@
-package com.bigkoo.pickerview.lib;
+package com.andylidong.pickerview.lib;
 
 import java.util.TimerTask;
 

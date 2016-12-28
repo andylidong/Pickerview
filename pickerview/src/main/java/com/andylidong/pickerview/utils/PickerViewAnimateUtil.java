@@ -1,8 +1,8 @@
-package com.bigkoo.pickerview.utils;
+package com.andylidong.pickerview.utils;
 
 import android.view.Gravity;
 
-import com.bigkoo.pickerview.R;
+import com.andylidong.pickerview.R;
 
 /**
  * Created by Sai on 15/8/9.

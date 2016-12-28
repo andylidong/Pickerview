@@ -1,4 +1,4 @@
-package com.bigkoo.pickerview;
+package com.andylidong.pickerview;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -7,8 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.bigkoo.pickerview.view.BasePickerView;
-import com.bigkoo.pickerview.view.WheelOptions;
+import com.andylidong.pickerview.view.BasePickerView;
+import com.andylidong.pickerview.view.WheelOptions;
 
 import java.util.ArrayList;
 import java.util.List;
