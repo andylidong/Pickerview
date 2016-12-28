@@ -10,3 +10,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+bintray.user=andylidong
+bintray.apikey=3ddb282ade8b65a2fa7640791280935f60897e48
+
