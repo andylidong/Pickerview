@@ -24,9 +24,8 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         ALL, YEAR_MONTH_DAY, HOURS_MINS, MONTH_DAY_HOUR_MIN , YEAR_MONTH
     }// 四种选择模式，年月日时分，年月日，时分，月日时分
 
-    WheelTime wheelTime;
-    private View btnSubmit, btnCancel;
-    private Button btnToday;
+    private WheelTime wheelTime;
+    private Button btnSubmit, btnCancel, btnToday;
     private TextView tvTitle;
     private static final String TAG_SUBMIT = "submit";
     private static final String TAG_CANCEL = "cancel";
@@ -40,9 +39,9 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         this.type = type;
         LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
         // -----确定和取消按钮
-        btnSubmit = findViewById(R.id.btnSubmit);
+        btnSubmit = (Button)findViewById(R.id.btnSubmit);
         btnSubmit.setTag(TAG_SUBMIT);
-        btnCancel = findViewById(R.id.btnCancel);
+        btnCancel = (Button)findViewById(R.id.btnCancel);
         btnCancel.setTag(TAG_CANCEL);
         btnToday = (Button) findViewById(R.id.btnToday);
         btnToday.setTag(TAG_TODAY);
@@ -141,6 +140,100 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         tvTitle.setText(title);
     }
 
+    /**
+     * 判断今天是否显示
+     * @param isShowToday
+     */
+    public void setToday(boolean isShowToday) {
+        if (isShowToday) {
+            btnToday.setVisibility(View.VISIBLE);
+            return;
+        }
+        btnToday.setVisibility(View.GONE);
+        // 设置显示的条目
+        wheelTime.setItemsVisible(11);
+    }
+
+    /**
+     * 设置确定的按钮信息
+     * @param submitText
+     */
+    public void setSubmit(String submitText) {
+        if(TextUtils.isEmpty(submitText)) {
+            return;
+        }
+        btnSubmit.setText(submitText);
+    }
+
+    /**
+     * 设置取消的按钮信息
+     * @param cancelText
+     */
+    public void setCancel(String cancelText) {
+        if(TextUtils.isEmpty(cancelText)) {
+            return;
+        }
+        btnCancel.setText(cancelText);
+    }
+
+
+    /**
+     * 设置年份的信息
+     * @param yearText
+     */
+    public void setYearText(String yearText) {
+        if(TextUtils.isEmpty(yearText)) {
+            return;
+        }
+        wheelTime.setYearText(yearText);
+    }
+
+    /**
+     * 设置月份的信息
+     * @param monthText
+     */
+    public void setMonthText(String monthText) {
+        if(TextUtils.isEmpty(monthText)) {
+            return;
+        }
+        wheelTime.setMonthText(monthText);
+    }
+
+
+    /**
+     * 设置日期的信息
+     * @param dayText
+     */
+    public void setDayText(String dayText) {
+        if(TextUtils.isEmpty(dayText)) {
+            return;
+        }
+        wheelTime.setDayText(dayText);
+    }
+
+
+    /**
+     * 设置小时的信息
+     * @param hourText
+     */
+    public void setHourText(String hourText) {
+        if(TextUtils.isEmpty(hourText)) {
+            return;
+        }
+        wheelTime.setHourText(hourText);
+    }
+
+
+    /**
+     * 设置分钟的信息
+     * @param minuteText
+     */
+    public void setMinuteText(String minuteText) {
+        if(TextUtils.isEmpty(minuteText)) {
+            return;
+        }
+        wheelTime.setMinuteText(minuteText);
+    }
 
     /**
      * 设置是否循环滚动
@@ -178,17 +271,6 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
     }
 
     /**
-     * 监听选中的时间信息
-     */
-    public interface OnTimeSelectListener {
-        void onTimeSelect(Date date);
-    }
-
-    public void setOnTimeSelectListener(OnTimeSelectListener timeSelectListener) {
-        this.timeSelectListener = timeSelectListener;
-    }
-
-    /**
      * 获取想要的时间格式
      * @param date
      * @return
@@ -196,5 +278,18 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
     public static String getTime(Date date, String timeFormatter) {
         SimpleDateFormat format = new SimpleDateFormat(timeFormatter);
         return format.format(date);
+    }
+
+
+    /**
+     * 监听选中的时间信息
+     */
+    public interface OnTimeSelectListener {
+        void onTimeSelect(Date date);
+
+    }
+
+    public void setOnTimeSelectListener(OnTimeSelectListener timeSelectListener) {
+        this.timeSelectListener = timeSelectListener;
     }
 }

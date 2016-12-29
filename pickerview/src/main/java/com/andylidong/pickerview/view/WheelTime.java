@@ -1,6 +1,7 @@
 package com.andylidong.pickerview.view;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
@@ -289,6 +290,77 @@ public class WheelTime {
 		wv_day.setCyclic(cyclic);
 		wv_hours.setCyclic(cyclic);
 		wv_mins.setCyclic(cyclic);
+	}
+
+
+	/**
+	 * 设置年份的信息
+	 * @param yearText
+	 */
+	public void setYearText(String yearText) {
+		if(TextUtils.isEmpty(yearText)) {
+			return;
+		}
+		tvYear.setText(yearText);
+	}
+
+	/**
+	 * 设置月份的信息
+	 * @param monthText
+	 */
+	public void setMonthText(String monthText) {
+		if(TextUtils.isEmpty(monthText)) {
+			return;
+		}
+		tvMonth.setText(monthText);
+	}
+
+
+	/**
+	 * 设置日期的信息
+	 * @param dayText
+	 */
+	public void setDayText(String dayText) {
+		if(TextUtils.isEmpty(dayText)) {
+			return;
+		}
+		tvDay.setText(dayText);
+	}
+
+
+	/**
+	 * 设置小时的信息
+	 * @param hourText
+	 */
+	public void setHourText(String hourText) {
+		if(TextUtils.isEmpty(hourText)) {
+			return;
+		}
+		tvHour.setText(hourText);
+	}
+
+
+	/**
+	 * 设置分钟的信息
+	 * @param minuteText
+	 */
+	public void setMinuteText(String minuteText) {
+		if(TextUtils.isEmpty(minuteText)) {
+			return;
+		}
+		tvMinute.setText(minuteText);
+	}
+
+	/**
+	 * 设置显示item的数目
+	 * @param itemsVisible
+     */
+	public void setItemsVisible(int itemsVisible) {
+		wv_year.setItemsVisible(itemsVisible);
+		wv_month.setItemsVisible(itemsVisible);
+		wv_day.setItemsVisible(itemsVisible);
+		wv_hours.setItemsVisible(itemsVisible);
+		wv_mins.setItemsVisible(itemsVisible);
 	}
 
 

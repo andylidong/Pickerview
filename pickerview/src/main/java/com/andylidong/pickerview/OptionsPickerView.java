@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.andylidong.pickerview.view.BasePickerView;
@@ -18,8 +19,8 @@ import java.util.List;
  * Created by Sai on 15/11/22.
  */
 public class OptionsPickerView<T> extends BasePickerView implements View.OnClickListener {
-    WheelOptions<T> wheelOptions;
-    private View btnSubmit, btnCancel;
+    private WheelOptions<T> wheelOptions;
+    private Button btnSubmit, btnCancel;
     private TextView tvTitle;
     private OnOptionsSelectListener optionsSelectListener;
     private List<String> optionsItems = new ArrayList<>();
@@ -29,9 +30,9 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
         super(context);
         LayoutInflater.from(context).inflate(R.layout.pickerview_options, contentContainer);
         // -----确定和取消按钮
-        btnSubmit = findViewById(R.id.btnSubmit);
+        btnSubmit = (Button)findViewById(R.id.btnSubmit);
         btnSubmit.setTag(TAG_SUBMIT);
-        btnCancel = findViewById(R.id.btnCancel);
+        btnCancel = (Button)findViewById(R.id.btnCancel);
         btnCancel.setTag(TAG_CANCEL);
         btnSubmit.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
@@ -132,10 +133,36 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
             });
         }
         tvTitle.setText(title);
-        Log.i("title", title);
     }
 
+    /**
+     * 设置确定的按钮信息
+     * @param submitText
+     */
+    public void setSubmit(String submitText) {
+        if(TextUtils.isEmpty(submitText)) {
+            return;
+        }
+        btnSubmit.setText(submitText);
+    }
 
+    /**
+     * 设置取消的按钮信息
+     * @param cancelText
+     */
+    public void setCancel(String cancelText) {
+        if(TextUtils.isEmpty(cancelText)) {
+            return;
+        }
+        btnCancel.setText(cancelText);
+    }
+
+    /**
+     * 判断数据是否重复显示
+     * @param cyclic1
+     * @param cyclic2
+     * @param cyclic3
+     */
     public void setCyclic(boolean cyclic1,boolean cyclic2,boolean cyclic3) {
         wheelOptions.setCyclic(cyclic1,cyclic2,cyclic3);
     }

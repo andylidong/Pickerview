@@ -2,10 +2,10 @@ package com.andylidong.pickerview.view;
 
 import android.view.View;
 
+import com.andylidong.pickerview.R;
 import com.andylidong.pickerview.adapter.ArrayWheelAdapter;
 import com.andylidong.pickerview.lib.WheelView;
 import com.andylidong.pickerview.listener.OnItemSelectedListener;
-import com.andylidong.pickerview.R;
 
 import java.util.ArrayList;
 

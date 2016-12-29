@@ -92,7 +92,7 @@ public class WheelView extends View {
     private float previousY = 0;
     long startTime = 0;
     // 修改这个值可以改变滑行速度
-    private static final int VELOCITYFLING = 10;
+    private static final int VELOCITYFLING = 15;
     int widthMeasureSpec;
     private int mGravity = Gravity.CENTER;
     private int drawCenterContentStart = 0;//中间选中文字开始绘制位置

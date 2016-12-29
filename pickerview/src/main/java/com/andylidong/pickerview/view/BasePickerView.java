@@ -11,9 +11,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
-import com.andylidong.pickerview.utils.PickerViewAnimateUtil;
 import com.andylidong.pickerview.R;
 import com.andylidong.pickerview.listener.OnDismissListener;
+import com.andylidong.pickerview.utils.PickerViewAnimateUtil;
 
 /**
  * Created by Sai on 15/11/22.
@@ -164,7 +164,9 @@ public class BasePickerView {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                dismiss();
+                if (event.getY() < v.getHeight() * 0.54D) {
+                    dismiss();
+                }
             }
             return false;
         }
