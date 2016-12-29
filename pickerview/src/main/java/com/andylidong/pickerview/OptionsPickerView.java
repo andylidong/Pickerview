@@ -131,8 +131,10 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
                     tvTitle.setText(optionsItems.get(options1));
                 }
             });
+            return;
         }
         tvTitle.setText(title);
+        wheelOptions.setOnoptionsSelectListener(null);
     }
 
     /**

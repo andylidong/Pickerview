@@ -138,6 +138,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
             return;
         }
         tvTitle.setText(title);
+        wheelTime.setOnTimeSelectListener(null);
     }
 
     /**

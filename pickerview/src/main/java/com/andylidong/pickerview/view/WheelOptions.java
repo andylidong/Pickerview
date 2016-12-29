@@ -111,7 +111,9 @@ public class WheelOptions<T> {
                     wheelListener_option2.onItemSelected(opt2Select);
 				}
 				if (index >= 0) {
-					optionsSelectListener.onOptionsSelect(index);
+					if (optionsSelectListener != null) {
+						optionsSelectListener.onOptionsSelect(index);
+					}
 				}
 			}
 		};
