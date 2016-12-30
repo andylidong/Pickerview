@@ -22,7 +22,7 @@ import java.util.Date;
 public class TimePickerView extends BasePickerView implements View.OnClickListener {
     public enum Type {
         ALL, YEAR_MONTH_DAY, HOURS_MINS, MONTH_DAY_HOUR_MIN , YEAR_MONTH
-    }// 四种选择模式，年月日时分，年月日，时分，月日时分
+    }// 五种选择模式，年月日时分，年月日，时分，月日时分，年月
 
     private WheelTime wheelTime;
     private Button btnSubmit, btnCancel, btnToday;
@@ -129,9 +129,9 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
                     Date time = null;
                     try {
                         time = formatter.parse(sb.toString());
-                        setTitle(getTime(time, timeFormatter));
+                        tvTitle.setText(getTime(time, timeFormatter));
                     } catch (Exception e) {
-                        setTitle("");
+                        tvTitle.setText("");
                     }
                 }
             });
