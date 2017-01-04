@@ -10,6 +10,7 @@ import com.andylidong.pickerview.adapter.NumericWheelAdapter;
 import com.andylidong.pickerview.lib.WheelView;
 import com.andylidong.pickerview.listener.OnItemSelectedListener;
 import com.andylidong.pickerview.R;
+import com.andylidong.pickerview.listener.OnTimeSelectListener;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -389,10 +390,6 @@ public class WheelTime {
 	/**
 	 * 监听选中的时间信息
 	 */
-	public interface OnTimeSelectListener {
-		void onTimeSelect(String year, String month, String day, String hour, String minutes);
-	}
-
 	public void setOnTimeSelectListener(OnTimeSelectListener timeSelectListener) {
 		this.timeSelectListener = timeSelectListener;
 	}

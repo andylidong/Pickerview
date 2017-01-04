@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.andylidong.pickerview.listener.OnTimeSelectListener;
 import com.andylidong.pickerview.view.BasePickerView;
 import com.andylidong.pickerview.view.WheelTime;
 
@@ -106,7 +107,12 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
      */
     public void setTitle(String title){
         if (TextUtils.isEmpty(title)) {
-            wheelTime.setOnTimeSelectListener(new WheelTime.OnTimeSelectListener() {
+            wheelTime.setOnTimeSelectListener(new OnTimeSelectListener() {
+                @Override
+                public void onTimeSelect(Date date) {
+
+                }
+
                 @Override
                 public void onTimeSelect(String year, String month, String day, String hour, String minutes) {
                     StringBuffer sb = new StringBuffer();
@@ -285,11 +291,6 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
     /**
      * 监听选中的时间信息
      */
-    public interface OnTimeSelectListener {
-        void onTimeSelect(Date date);
-
-    }
-
     public void setOnTimeSelectListener(OnTimeSelectListener timeSelectListener) {
         this.timeSelectListener = timeSelectListener;
     }
