@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.andylidong.pickerview.TimePickerView;
+import com.andylidong.pickerview.listener.OnTimeSelectListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -43,10 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     tpPicker.show();
                 }
-                tpPicker.setOnTimeSelectListener(new TimePickerView.OnTimeSelectListener() {
+                tpPicker.setOnTimeSelectListener(new OnTimeSelectListener() {
                     @Override
                     public void onTimeSelect(Date date) {
                         tvShow.setText(getTime(date));
+                    }
+
+                    @Override
+                    public void onTimeSelect(String year, String month, String day, String hour, String minutes) {
+
                     }
                 });
             }
